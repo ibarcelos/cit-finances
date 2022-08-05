@@ -4,41 +4,30 @@ This repo is just a baseline for using our apis
 
 # 1 - on project folder
 
-npm install
+  npm install
 
-WARNING: if needed, use --force
-this happens because not all dependencies are up-to-date
+  WARNING: if needed, use --force
+  this happens because not all dependencies are up-to-date
 
 # 2 - on your controller (spring boot)
 
                     
-/\* This will free all entries to the application: !!!!!NEVER USE IT IN PRODUCTION!!!!!    \*/
+  /\* This will free all entries to the application: !!!!!NEVER USE IT IN PRODUCTION!!!!!    \*/
 
-@CrossOrigin("\*")   
-public class PostController {
-...
-}
+  @CrossOrigin("\*")   
+  public class PostController {
+  ...
+  }
 
 
 # 3 - on your react folder
 
-npm start
+  npm start
 
 # 4 - edit the route for your api ( In App.js )
-''' 
-const [data, setData] = useState([]);
+  
+  ![image](https://user-images.githubusercontent.com/109676034/183122367-f35dd9a1-dee0-408a-8977-8733fff0a33a.png)
 
-  const fetchPosts = () => {
-    const link = "http://localhost:8080/api/v1/post";
-    axios
-      .get(link)
-      .then(res => {
-        setData(res.data);
-      })
-  }
-  useEffect(() => {
-    fetchPosts();
-  }, []) '''
   
   My route is api/v1/post, but yours can be build different. is up to you to change as you please
   
