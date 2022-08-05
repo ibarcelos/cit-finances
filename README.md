@@ -17,3 +17,8 @@ this happens because not all dependencies are up-to-date
 public class PostController {
 ...
 }
+
+
+# 3 - on your react folder
+
+npm start
