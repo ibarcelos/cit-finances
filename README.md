@@ -2,7 +2,7 @@
 
 This repo is just a baseline for using our apis
 
-# 1 - on project folder
+# 1 - on react folder
 
   npm install
 
