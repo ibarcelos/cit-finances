@@ -1,38 +1,91 @@
 body {
-    background-color: #e3e3e3;
+    background-color: #ffffff;
     font-size: 16px;
     color: black;
+}
+
+header {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: space-around;
+    border: 0.075rem solid rgb(16, 52, 168);
+    border-radius: 1.5rem;
+    justify-content: center;
 }
 
 li {
     list-style: none;
     font-size: 1rem;
-    margin: 3rem 0.625rem;
+    font-weight: 500;
+    padding: 0.70rem 1rem;
+    border-right: 0.075rem solid rgb(16, 52, 168);
+
+}
+
+li:last-child {
+    border-right: none;
+}
+
+main {
+    margin-top: 1.3rem;
+}
+
+.postings {
+    margin-left: 1rem;
+    font-weight: 700;
+}
+
+.postings .gap {
+    margin-left: 1.3rem;
+}
+
+.postings a {
+    font-weight: 500;
+}
+
+
+main fieldset {
+
+    margin: 0 1rem;
+    margin-top: 1.3rem;
+    border: 0.075rem solid black;
+    border-radius: 0.75rem;
+}
+
+main fieldset legend {
+    color: white;
+    padding: 0.5rem 1.7rem 0.5rem 0.5rem;
+    border-radius: 0.65rem;
+    background-color: #1c85db;
 }
 
 main fieldset .filters {
+
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin: 0 0.3rem;
+
+}
+
+main fieldset .filters label {
+    font-weight: 500;
 }
 
 main table {
-    margin-top: 1rem;
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
+
     border: 1px solid black;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
+    margin: 0 0.7rem;
+    margin-top: 1.3rem;
 }
 
 main table thead {
@@ -41,25 +94,31 @@ main table thead {
 }
 
 main table thead tr {
-    border: 1px solid black;
+    border: 0.15rem solid black;
 }
 
 main table thead tr th {
     text-align: center;
-    border: 1px solid black;
+    border: 0.15rem solid black;
 }
 
 main table tbody tr {
-    border: 1px solid black;
+    border: 0.15rem solid black;
 }
 
 main table tbody tr td {
-    padding: 0.5rem;
+    padding: 0.25rem;
     text-align: center;
-    border: 1px solid black;
+    border: 0.15rem solid black;
 }
 
 
 main table tbody tr td {
-    border: 1px solid #e3e3e3;
+    border: 0.15rem solid black;
+}
+
+.activated {
+    background-color: #4444ff;
+    color: white;
+    font-weight: 700;
 }
