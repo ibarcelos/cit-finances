@@ -21,72 +21,17 @@ function App() {
 
 
   const fetchPosts = () => {
-    const postLink = "http://localhost:8080/api/v1/post";
-    axios
-      .get(postLink)
-      .then(res => {
-        setData(res.data.content);
-      })
+    const postLink = "http://localhost:8080/api/v1/post/dated";
+    axios({
+      method: 'post',
+      url: postLink,
+      data: {
+      }
+    }).then(res => {
+      setData(res.data.content);
+    })
       .catch(err => {
         console.log(err);
-        setData([
-          {
-            "date": "2022-08-05",
-            "description": "ANY INCOME",
-            "value": 25.66,
-            "type": {
-              "name": "INCOME"
-            }
-          },
-          {
-            "date": "2022-08-06",
-            "description": "a description",
-            "value": 26.87,
-            "type": {
-              "name": "INCOME"
-            }
-          },
-          {
-            "date": "2022-08-05",
-            "description": "ANY OUTCOME",
-            "value": 235.66,
-            "type": {
-              "name": "INCOME"
-            }
-          },
-          {
-            "date": "2022-08-06",
-            "description": "a description",
-            "value": 263.87,
-            "type": {
-              "name": "INCOME"
-            }
-          },
-          {
-            "date": "2022-08-06",
-            "description": "ANY INCOME33",
-            "value": 3445.66,
-            "type": {
-              "name": "INCOME"
-            }
-          },
-          {
-            "date": "2022-08-05",
-            "description": "ANY INCOME2",
-            "value": 23445.66,
-            "type": {
-              "name": "INCOME"
-            }
-          },
-          {
-            "date": "2022-08-06",
-            "description": "ANY INCOME3",
-            "value": 423445.66,
-            "type": {
-              "name": "INCOME"
-            }
-          }
-        ]);
       });
   }
 
@@ -120,6 +65,9 @@ function App() {
         }
       }).then(res => {
         setData(res.data.content)
+        console.log(res.data.content)
+        console.log(begginingDate)
+        console.log(endingDate)
       }).catch(err => {
         console.err(err)
       });
@@ -174,7 +122,7 @@ function App() {
                 <td><span>{post.date}</span></td>
                 <td><span>{post.type.name}</span></td>
                 <td><span>{post.description}</span></td>
-                <td><span>{post.value}</span></td>
+                <td><span>{post.value} R$</span></td>
                 <td><span>Edit | Remove</span></td>
               </tr>
             ))}
